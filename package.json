@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "name": "code-snippets",
+  "description": "code snippets",
+  "main": "./index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+  }
+}
