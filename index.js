@@ -2,10 +2,10 @@
 import * as util from "./lib/util.js"
 import cNode from "./lib/cNode.js"
 import cQueue from "./lib/cQueue.js"
-import * as encPar from "./lib/encPar.js"
-import * as encLvl from "./lib/encLvl.js"
-import * as encLen from "./lib/encLen.js"
-import * as encEnd from "./lib/encEnd.js"
+import * as encPar from "./lib/encode/encPar.js"
+import * as encLvl from "./lib/encode/encLvl.js"
+import * as encLen from "./lib/encode/encLen.js"
+import * as encEnd from "./lib/encode/encEnd.js"
 import * as isoLenLvl from "./lib/isoLenLvl.js"
 
 // default pre-order (PRE)                              a
@@ -24,11 +24,14 @@ try {
   let root = encPar.decodePRE(n, par)[0];
   let ret = null;
 
-  console.log("convert: lvl -> len");
-  root = testConvLvlToLen(root);
+  ret = encLen.encodePREv2(root);
+  console.log(ret.len);
 
-  console.log("convert: len -> lvl");
-  root = testConvLenToLvl(root);
+  //console.log("convert: lvl -> len");
+  //root = testConvLvlToLen(root);
+
+  //console.log("convert: len -> lvl");
+  //root = testConvLenToLvl(root);
 
   //- x  1  1  3  3  5  5  1  8 - par
   console.log("verify the tree");
