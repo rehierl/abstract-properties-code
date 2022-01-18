@@ -1,2 +1,2 @@
 
-- abstract properties, code snippets
+- code snippets related to "abstract properties"
