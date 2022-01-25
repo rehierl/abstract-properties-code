@@ -1,2 +1,2 @@
 
-- code snippets related to "abstract properties"
+- code snippets related to the "abstract properties" repository

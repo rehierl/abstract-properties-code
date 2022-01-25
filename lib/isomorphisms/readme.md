@@ -9,7 +9,7 @@ according to the pre-order tree traversal.
 
 ```
 Hrp <-> Hrs <-> Hlvl
-|<-------DT------->|
+|<-----> DT <----->|
 ```
 
 Recall that a hierarchy of rooted paths (Hrp) is isomorphic to a hierarchy of
@@ -17,7 +17,7 @@ reversed scopes (Hrs) and isomorphic to a hierarchy of level values (Hlvl).
 
 ```
 Hpre <-> Hs <-> Hlen
-|<-------DT------->|
+|<-----> DT <----->|
 ```
 
 Recall that a hierarchy of pre-order traces (Hpre) is isomorphic to a hierarchy
@@ -25,7 +25,7 @@ of scopes (Hs) and isomorphic to a hierarchy of length values (Hlen).
 
 ```
 Hlvl <--> Hlen
-|<----DT---->|
+|<--> DT <-->|
 ```
 
 Note that, since a document tree is isomorphic to all of these hierarchies, a
