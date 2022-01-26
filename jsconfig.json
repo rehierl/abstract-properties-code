@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es2015",
-    //"checkJs": false,
+    "checkJs": false,
   },
   "exclude": [ "node_modules" ]
 }

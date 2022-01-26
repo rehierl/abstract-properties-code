@@ -2,8 +2,8 @@
   "private": true,
   "type": "module",
   "version": "0.0.1",
-  "name": "code-snippets",
-  "description": "code snippets",
+  "name": "ap-sample-code",
+  "description": "abstract properties, sample code",
   "main": "./index.js",
   "directories": {
     "lib": "./lib"
