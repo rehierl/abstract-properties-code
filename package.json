@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "version": "0.0.1",
-  "name": "ap-sample-code",
+  "name": "abstract-properties-sample-code",
   "description": "abstract properties, sample code",
   "main": "./index.js",
   "directories": {

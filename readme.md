@@ -1,5 +1,5 @@
 
-This repository is in regards to the **abstract properties** repository.
+This repository is in regards to the **abstract-properties** repository.
 
 * The source code is partially contained in **chapter 17**.
 * This repository proofs that the concept of scopes does work.
@@ -12,7 +12,7 @@ which can be configured to run
 [Node](https://nodejs.org/en/)
 based projects.
 
-The source code in the **/encodings** subfolder allows to encode and
+The source code in the **/lib/encodings** subfolder allows to encode and
 decode a document tree into and from simple sequences of numeric values.
 
 * par - the parent-based explicit encoding
@@ -27,11 +27,10 @@ in the corresponding induced subtree.
 
 Note that the end-/first-/last-based encodings are specialized level-based
 encodings. Because of that, these encodings don't add anything substantial
-other than these can be read/written more efficiently than the level-based
-encoding.
+other than that these can be read/written more efficiently.
 
-The source code in the **/isomorphisms** subfolder is intended to provide a
-deeper understanding of the level- and the length-based encodings by forming
+The source code in the **/lib/isomorphisms** subfolder is intended to provide
+a deeper understanding of the level- and the length-based encodings by forming
 these from their explicit counterparts, such as a hierarchy of rooted paths.
 This approach allows to show a stepwise refinement of how the these encodings
 can be implemented.
@@ -50,11 +49,11 @@ a  b  c  d  e  f  g  h  i - n, trace           b    c      h
 9  2  7  4  7  6  7  9  9 - lst, node.lst
 ```
 
-Note that the word **isomorphism** in this context is used to denote that
-**two structures can be transformed into each other**, while maintaining all
-the information each structure holds. The focus in this context is however
-on the structure of a document tree, described in terms of node references
-(r) and edges, not so much on the actual node definitions (n).
+Note that the word **isomorphism** in this context is only used to denote that
+**two structures can be transformed into one another**, while maintaining all
+the information each structure holds. The focus in this context is however on
+the structure of a document tree, described in terms of node references (r)
+and edges, not so much on the actual node definitions (n).
 
 ```
 Hrp <-> Hrs <-> DT <-> Hs <-> Hpre
@@ -68,7 +67,7 @@ to a hierarchy of pre-order traces (Hpre), isomorphic to a hierarchy of
 scopes (Hs), and isomorphic to a hierarchy of length values (Hlen).
 
 Note that Hrs and Hs are both families of sets of nodes, each of which
-has specific characterisitcs. The only difference is that Hrs is formed by
+has specific characteristics. The only difference is that Hrs is formed by
 replacing each rooted path in Hrp by the set of nodes it holds, while Hs
 is formed by replacing each pre-order trace by the set of nodes in the
 corresponding induced subtree.
@@ -89,6 +88,8 @@ of length values (i.e. the tree's length-based encoding).
 
 Note that Hlvl and Hlen can both be transformed into each other, without
 having to first decode the entire document tree. That is, Hlen can be formed
-from Hlvl on the fly, and vice versa.
+on the fly while decoding Hlvl, and vice versa.
+
+* see [Hlen-Hlvl.js](./lib/isomorphisms/iso-3-0-Hlen-Hlvl.js) for details
 
 Note that, to some extent, **Hlvl can be described as being dual to Hlen**.
