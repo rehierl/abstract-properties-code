@@ -2,7 +2,7 @@
 This repository is in regards to the **abstract-properties** repository.
 
 * The source code is partially contained in **chapter 17**.
-* This repository proofs that the concept of scopes does work.
+* This repository showcases that the concept of scopes does work.
 
 Note that the source code in this repository can be executed using the
 [Visual Studio Code](https://code.visualstudio.com/)
@@ -66,16 +66,20 @@ hierarchy of level values (Hlvl). Also, a document tree (DT) is isomorphic
 to a hierarchy of pre-order traces (Hpre), isomorphic to a hierarchy of
 scopes (Hs), and isomorphic to a hierarchy of length values (Hlen).
 
+* see [DT-Hlvl.js](./lib/isomorphisms/iso-1-2-DT-Hlvl.js)
+  and [DT-Hlen.js](./lib/isomorphisms/iso-2-2-DT-Hlen.js)
+
 Note that Hrs and Hs are both families of sets of nodes, each of which
 has specific characteristics. The only difference is that Hrs is formed by
 replacing each rooted path in Hrp by the set of nodes it holds, while Hs
 is formed by replacing each pre-order trace by the set of nodes in the
 corresponding induced subtree.
 
-Note that Hlen and Hlvl both hold one node count for each set in the
-corresponding hierarchy. In combination with a particular trace of nodes
-(i.e. a particular tree traversal), each sequence of node counts can be
-understood to completely define the structure of the corresponding tree.
+Note that Hlen and Hlvl are both sequences of node counts which hold one
+node count for each set in the corresponding hierarchy. In combination with
+a particular trace of nodes (i.e. a particular tree traversal), each sequence
+of node counts can be understood to completely define the structure of the
+corresponding tree.
 
 ```
 Hlvl <--> Hlen
@@ -84,12 +88,11 @@ Hlvl <--> Hlen
 
 As a matter of consequence, a hierarchy/sequence of level values (i.e. the
 tree's level-based encoding) is isomorphic to the document tree's hierarchy
-of length values (i.e. the tree's length-based encoding).
+of length values (i.e. the tree's length-based encoding). That is, Hlvl and
+Hlen can both be transformed into each other, without having to first decode
+the entire document tree. To be more accurate, Hlen can be formed on the fly
+while decoding Hlvl, and vice versa.
 
-Note that Hlvl and Hlen can both be transformed into each other, without
-having to first decode the entire document tree. That is, Hlen can be formed
-on the fly while decoding Hlvl, and vice versa.
-
-* see [Hlen-Hlvl.js](./lib/isomorphisms/iso-3-0-Hlen-Hlvl.js) for details
+* see [Hlen-Hlvl.js](./lib/isomorphisms/iso-3-0-Hlen-Hlvl.js)
 
 Note that, to some extent, **Hlvl can be described as being dual to Hlen**.
