@@ -1,8 +1,9 @@
 
 This repository is in regards to the **abstract-properties** repository.
 
-* The source code is partially contained in **chapter 17**.
-* This repository suggests that the concept of scopes does work.
+* The source code in this repository is partially contained
+  in the abstract-properties repository.
+* This repository shows that interval-based scopes do work.
 
 Note that the source code in this repository can be executed using the
 [Visual Studio Code](https://code.visualstudio.com/)
